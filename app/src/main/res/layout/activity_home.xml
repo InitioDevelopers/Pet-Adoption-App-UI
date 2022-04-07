@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeMainHading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/textviewDescover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:text="Pet's Adoption"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textviewWhatsUp"
+            android:layout_below="@+id/textviewDescover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find you Lovely Pet's in Anywhere" />
+
+
+
+
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <SearchView
+                android:id="@+id/searchviewSearccbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+        <LinearLayout
+            android:id="@+id/linearMain"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/textViewPetsCategory"
+                        android:layout_width="0dp"
+                        android:gravity="start"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/small_title"
+                        android:layout_height="wrap_content"
+                        android:text="Choose a \nPet's Category"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/textViewAdopt"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:textColor="#f78d9b"
+                        android:layout_marginLeft="50dp"
+                        android:background="@drawable/adopt_button_border"
+                        android:layout_height="wrap_content"
+                        android:text="Adopt" />
+                    <TextView
+                        android:id="@+id/textViewDonate"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#43515d"
+                        android:background="@drawable/donate_border"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Donate"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleCategory"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="@dimen/small_title"
+                    android:text="Recommended Pet's"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleRecommended"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                </androidx.recyclerview.widget.RecyclerView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/card"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textViewJoinToday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Join Today and \n Save Lives"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_title"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewTextlines"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewJoinToday"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="Join Today and  Save Lives"
+                            android:textColor="@color/white"
+                            android:textSize="7sp" />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/buttonDonate"
+                            android:layout_below="@+id/textViewTextlines"
+                            android:text="DONATE"
+                            android:textColor="@color/white"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/donate_button_border"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/footprints"/>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+</LinearLayout>
+</ScrollView>
